@@ -11,24 +11,31 @@ const About = () => {
   const pastorTeam = [
     {
       id: "1",
-      name: "Pastor John Doe",
-      role: "Senior Pastor",
+      name: "Rev. Micheal Boakye Yiadom",
+      role: "General Overseer",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      bio: "Pastor John has been leading Household Chapel for 15 years with a passion for teaching God's word and discipleship.",
+      bio: "Rev Micheal has been leading Household Chapel for the past 25 years with a passion for teaching God's word and discipleship.",
     },
     {
       id: "2",
-      name: "Pastor Jane Smith",
-      role: "Associate Pastor",
+      name: "Rev Richmond Anthony Malm",
+      role: "Deputy General Overseer ",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      bio: "Pastor Jane oversees our worship and youth ministries, bringing vibrant leadership and a heart for mentoring.",
+      bio: "Rev Richmond has been leading Household Chapel for the past 25 years with a passion for teaching God's word and discipleship",
     },
     {
       id: "3",
-      name: "Pastor Michael Johnson",
-      role: "Outreach Pastor",
+      name: "Rev.Johnson Owusu",
+      role: "National Treasurer",
       image: "https://images.unsplash.com/photo-1567515004624-219c11d31f2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      bio: "Pastor Michael leads our community outreach initiatives with compassion and a vision for community transformation.",
+      bio: "Rev.Johnson leads our community outreach initiatives with compassion and a vision for community transformation.",
+    },
+    {
+      id: "4",
+      name: "Pastor Stephen Appiah",
+      role: "Youth Pastor",
+      image: "https://images.unsplash.com/photo-1567515004624-219c11d31f2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      bio: "Pastor Stephen leads our youth ministries, bringing vibrant leadership and a heart for mentoring.",
     },
   ];
 
@@ -91,14 +98,25 @@ const About = () => {
                 className="mb-6"
               />
               <p className="text-gray-700 mb-4">
-                Household Chapel International was founded in 1999 with a vision to build a community of believers who would experience the transformative power of Christ and become agents of change in their communities and beyond.
+                Household Chapel International was founded in the month of october 1999 with a vision to build a community of believers who would experience the transformative power of Christ and become agents of change in their communities and beyond.
               </p>
               <p className="text-gray-700 mb-4">
-                What began as a small gathering in a living room has grown into a vibrant church family committed to worship, discipleship, and outreach. Through the years, we have remained dedicated to our founding principles while adapting to meet the needs of our growing congregation and changing community.
+              Rev. Micheal Boakye Yiadom and two other brethren Rev Richmond Malm and  brother Evans Adioo. The first meeting held to discuss about the name of the church, the place of meeting of the church and some items needed for the church to take off was held in the house of Rev. Micheal Boakye Yiadom.
+              </p>
+              <p className="text-gray-700 mb-4">
+              The name of the church was taken from Ephesians 2:19-20 (NIV). The church's inauguration meeting was held at Firm Foundation Academy Sch at Apenkwa Mantseman with 14 people in attendance. The first person to be baptized in the church was Mr. Landis Aboagye who was also a teacher in Firm Foundation Academy.
+              </p>
+
+              <p className="text-gray-700 mb-4">
+              The true turn around of the church came in when the Lord through Rev. Micheal Boakye Yiadom reached out to Mr. Johnson Owusu who is now a minister ot the gospel in the church.
+              Through him the floodgates of the membership of the church was open bringing in members like Elder Timothy, Pst. Martin, Elder Effah, Pst. Victor, to name a few.
               </p>
               <p className="text-gray-700">
-                Our name "Household Chapel International" reflects our belief that the church is God's household, a spiritual family united by faith in Christ, with a mission that extends beyond geographical boundaries to reach the nations with the gospel.
+              The church moved to the next level when most of the leaders found their partners. Mrs. Beatrice Boakye came in, Mrs. Rosemary Malm, Mrs. Owusu, to mention a few.
+
               </p>
+              
+              
             </div>
           </div>
         </div>
