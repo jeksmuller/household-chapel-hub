@@ -13,6 +13,7 @@ interface HeroProps {
   secondaryButtonLink?: string;
   className?: string;
   overlayOpacity?: string;
+  contentPosition?: string;
 }
 
 const Hero = ({
@@ -25,11 +26,13 @@ const Hero = ({
   secondaryButtonLink = "/",
   className,
   overlayOpacity = "bg-black/50",
+  contentPosition = "center",
 }: HeroProps) => {
   return (
     <div 
       className={cn(
-        "relative flex items-center justify-center py-32 md:py-40 lg:py-52 px-6",
+        "relative flex items-center py-32 md:py-40 lg:py-52 px-6",
+        contentPosition === "center" ? "justify-center" : "justify-start",
         className
       )}
       style={{
@@ -42,7 +45,10 @@ const Hero = ({
       <div className={`absolute inset-0 ${overlayOpacity}`}></div>
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto animate-fade-in">
+      <div className={cn(
+        "relative z-10 max-w-4xl animate-fade-in",
+        contentPosition === "center" ? "text-center mx-auto" : "text-left ml-8 md:ml-16"
+      )}>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif mb-6">
           {title}
         </h1>

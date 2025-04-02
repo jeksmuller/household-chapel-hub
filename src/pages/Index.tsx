@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
@@ -65,15 +64,17 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section with Anniversary Image */}
       <Hero
-        title="Welcome to Household Chapel International"
-        subtitle="Christ in You! The hope of Glory"
-        backgroundImage="https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-        buttonText="Join Us Sunday"
-        buttonLink="/services"
-        secondaryButtonText="About Us"
+        title="Celebrating 25 Years of Ministry"
+        subtitle="Love for God, Love for Church, Love for One Another"
+        backgroundImage="/lovable-uploads/1b839fc1-b904-4368-afbd-fa67db69873c.png"
+        buttonText="Join Our Celebration"
+        buttonLink="/events"
+        secondaryButtonText="Learn More"
         secondaryButtonLink="/about"
+        overlayOpacity="bg-black/30"
+        contentPosition="left"
       />
 
       {/* Welcome Section */}
