@@ -19,6 +19,7 @@ const Index = () => {
       location: "Main Sanctuary",
       image: "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "Join us for a day of spiritual growth, fellowship, and inspiration at our Annual Church Conference.",
+      sessions: [] // Add empty sessions array
     },
     {
       id: "2",
@@ -28,6 +29,7 @@ const Index = () => {
       location: "Camp Grounds",
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A special retreat for our youth to connect with God and each other through fun activities and worship.",
+      sessions: [] // Add empty sessions array
     },
   ];
 

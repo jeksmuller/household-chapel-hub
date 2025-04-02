@@ -36,6 +36,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "Join us for a day of spiritual growth, fellowship, and inspiration at our Annual Church Conference. Featuring guest speakers, workshops, and worship.",
       category: "conference",
+      sessions: []
     },
     {
       id: "2",
@@ -46,6 +47,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A special retreat for our youth to connect with God and each other through fun activities and worship.",
       category: "youth",
+      sessions: []
     },
     {
       id: "3",
@@ -56,6 +58,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1469571486292-b5175a148cf5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "Join us as we serve our community by providing food, clothing, and prayers to those in need.",
       category: "outreach",
+      sessions: []
     },
     {
       id: "4",
@@ -66,6 +69,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A weekend retreat designed to strengthen marriages through God's principles of love, respect, and commitment.",
       category: "retreat",
+      sessions: []
     },
     {
       id: "5",
@@ -76,6 +80,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1501946623428-b301146b83d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "Join us for a night of united prayer as we intercede for our church, community, and nation.",
       category: "prayer",
+      sessions: []
     },
     {
       id: "6",
@@ -86,6 +91,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1510006434045-fd4232a6ff9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A special service to express gratitude to God for His blessings and faithfulness throughout the year.",
       category: "service",
+      sessions: []
     },
   ];
 
@@ -99,6 +105,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1557132720-57c1b8528229?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A celebration of the resurrection of Jesus Christ with inspiring worship and message.",
       category: "service",
+      sessions: []
     },
     {
       id: "8",
@@ -109,6 +116,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "An evening dedicated to worship through music, prayer, and communion.",
       category: "worship",
+      sessions: []
     },
     {
       id: "9",
@@ -119,6 +127,7 @@ const Events = () => {
       image: "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       description: "A fun-filled day for children with games, activities, and refreshments to celebrate their importance in our church family.",
       category: "children",
+      sessions: []
     },
   ];
 

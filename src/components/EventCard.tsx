@@ -4,6 +4,24 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+interface Session {
+  name: string;
+  time: string;
+  days: string;
+}
+
+interface EventCardProps {
+  id: string;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  image: string;
+  description: string;
+  sessions?: Session[]; // Make sessions optional with the ? operator
+  category?: string; // Add category as optional too for future flexibility
+}
+
 const EventCard = ({
   id,
   title,
@@ -13,7 +31,7 @@ const EventCard = ({
   image,
   description,
   sessions,
-}) => {
+}: EventCardProps) => {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <div className="aspect-video relative overflow-hidden">
