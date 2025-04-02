@@ -13,14 +13,14 @@ const About = () => {
       id: "1",
       name: "Rev. Micheal Boakye Yiadom",
       role: "General Overseer",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      image: "https://images.unsplash.com/photo-1567515004624-219c11d31f2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       bio: "Rev Micheal has been leading Household Chapel for the past 25 years with a passion for teaching God's word and discipleship.",
     },
     {
       id: "2",
       name: "Rev Richmond Anthony Malm",
       role: "Deputy General Overseer ",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      image: "https://images.unsplash.com/photo-1567515004624-219c11d31f2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       bio: "Rev Richmond has been leading Household Chapel for the past 25 years with a passion for teaching God's word and discipleship",
     },
     {
