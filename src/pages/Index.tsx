@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
@@ -32,6 +33,11 @@ const Index = () => {
       sessions: [] // Add empty sessions array
     },
   ];
+
+  // Sort upcoming events by date (most recent first)
+  const sortedUpcomingEvents = [...upcomingEvents].sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 
   // Sample data for latest sermons
   const latestSermons = [
@@ -316,7 +322,7 @@ const Index = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {upcomingEvents.map((event) => (
+            {sortedUpcomingEvents.map((event) => (
               <EventCard key={event.id} {...event} />
             ))}
           </div>
