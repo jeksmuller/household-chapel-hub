@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
@@ -13,6 +12,21 @@ const Events = () => {
   
   // Sample events data
   const upcomingEvents = [
+    {
+      id: "easter-convention",
+      title: "Easter Convention 2025",
+      date: "2025-04-18",
+      time: "Multiple Sessions (Apr 18-20)",
+      location: "Church Auditorium, Bethesda Temple, Nsawam",
+      image: "/lovable-uploads/25c585a0-384b-4a36-9018-8f9958f02cf0.png",
+      description: "Join us for our Easter Convention with the theme 'The Mystery About The Blood of Jesus' (1 Peter 1:18-19). Featuring guest speakers Rev. Richmond Malm, Rev. Michael Boakye-Yiadom, Rev. Johnson Owusu, and Pas. Stephen Appiah.",
+      category: "convention",
+      sessions: [
+        { name: "Jericho Hour", time: "5AM - 6AM", days: "Fri - Sun" },
+        { name: "Evening Service", time: "6:30PM - 9PM", days: "Fri - Sat" },
+        { name: "Morning Service", time: "9AM - 12PM", days: "Sunday" }
+      ]
+    },
     {
       id: "1",
       title: "Annual Church Conference",
@@ -131,7 +145,8 @@ const Events = () => {
       <Hero
         title="Church Events"
         subtitle="Join us for these special events and activities"
-        backgroundImage="https://images.unsplash.com/photo-1538032101404-0063983bd0e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        backgroundImage="/lovable-uploads/25c585a0-384b-4a36-9018-8f9958f02cf0.png"
+        overlayOpacity="bg-black/60"
       />
       
       {/* Category Filter Section */}

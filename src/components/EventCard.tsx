@@ -4,16 +4,6 @@ import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-interface EventCardProps {
-  id: string;
-  title: string;
-  date: string;
-  time: string;
-  location: string;
-  image: string;
-  description: string;
-}
-
 const EventCard = ({
   id,
   title,
@@ -22,7 +12,8 @@ const EventCard = ({
   location,
   image,
   description,
-}: EventCardProps) => {
+  sessions,
+}) => {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <div className="aspect-video relative overflow-hidden">
@@ -45,7 +36,22 @@ const EventCard = ({
             <p className="text-gray-600 mb-3">
               <span className="font-medium">{time}</span> | {location}
             </p>
-            <p className="text-gray-700 mb-4 line-clamp-2">{description}</p>
+            <p className="text-gray-700 mb-4 line-clamp-3">{description}</p>
+            
+            {sessions && sessions.length > 0 && (
+              <div className="mb-4 bg-gray-50 p-3 rounded-md">
+                <h4 className="font-semibold mb-2 text-church-purple">Event Schedule:</h4>
+                <ul className="space-y-1">
+                  {sessions.map((session, index) => (
+                    <li key={index} className="text-sm flex justify-between">
+                      <span className="font-medium">{session.name}</span>
+                      <span>{session.time} ({session.days})</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            
             <Button asChild className="bg-church-purple hover:bg-church-dark text-white w-full mt-2">
               <Link to={`/events/${id}`}>Learn More</Link>
             </Button>
