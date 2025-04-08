@@ -21,10 +21,38 @@ interface BlogPost {
   content: string;
   date: string;
   image: string;
+  gallery?: string[]; // Optional array of additional images
 }
 
 // Sample blog posts data
 const sampleBlogPosts: BlogPost[] = [
+  {
+    id: "0",
+    title: "Outreach Program - 25th Anniversary Preparation",
+    content: "Our community outreach program successfully served many families in our neighborhood before our church's 25th anniversary celebration. Church members volunteered their time and resources to make this event impactful for those in need.",
+    date: "2023-10-15",
+    image: "/lovable-uploads/image_0.png", // Using first uploaded image as cover
+    gallery: [
+      "/lovable-uploads/image_1.png",
+      "/lovable-uploads/image_2.png",
+      "/lovable-uploads/image_3.png",
+      "/lovable-uploads/image_4.png",
+      "/lovable-uploads/image_5.png",
+      "/lovable-uploads/image_6.png",
+      "/lovable-uploads/image_7.png",
+      "/lovable-uploads/image_8.png",
+      "/lovable-uploads/image_9.png",
+      "/lovable-uploads/image_10.png",
+      "/lovable-uploads/image_11.png",
+      "/lovable-uploads/image_12.png",
+      "/lovable-uploads/image_13.png",
+      "/lovable-uploads/image_14.png",
+      "/lovable-uploads/image_15.png",
+      "/lovable-uploads/image_16.png",
+      "/lovable-uploads/image_17.png",
+      "/lovable-uploads/image_18.png"
+    ]
+  },
   {
     id: "1",
     title: "Youth Conference 2023",
@@ -62,6 +90,7 @@ const Blog = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>(sampleBlogPosts);
   const [isAddingPost, setIsAddingPost] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showGallery, setShowGallery] = useState<string | null>(null);
   
   // Initialize form with react-hook-form and zod validation
   const form = useForm<BlogFormValues>({
@@ -112,6 +141,14 @@ const Blog = () => {
       };
       
       reader.readAsDataURL(file);
+    }
+  };
+
+  const toggleGallery = (postId: string) => {
+    if (showGallery === postId) {
+      setShowGallery(null);
+    } else {
+      setShowGallery(postId);
     }
   };
 
@@ -292,12 +329,44 @@ const Blog = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-church-purple">{post.title}</h3>
                   <p className="text-gray-700 mb-4 leading-relaxed">{post.content}</p>
-                  <Button 
-                    variant="link" 
-                    className="text-church-purple p-0 hover:text-church-dark"
-                  >
-                    Read More
-                  </Button>
+                  
+                  {post.gallery && (
+                    <Button 
+                      variant="link" 
+                      className="text-church-purple p-0 hover:text-church-dark mb-4"
+                      onClick={() => toggleGallery(post.id)}
+                    >
+                      {showGallery === post.id ? "Hide Photo Gallery" : "View Photo Gallery"}
+                    </Button>
+                  )}
+                  
+                  {showGallery === post.id && post.gallery && (
+                    <div className="mt-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                        {post.gallery.map((img, index) => (
+                          <div 
+                            key={index} 
+                            className="aspect-square rounded-md overflow-hidden shadow-sm border"
+                          >
+                            <img 
+                              src={img} 
+                              alt={`Gallery image ${index + 1}`} 
+                              className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {!post.gallery && (
+                    <Button 
+                      variant="link" 
+                      className="text-church-purple p-0 hover:text-church-dark"
+                    >
+                      Read More
+                    </Button>
+                  )}
                 </div>
               </div>
             ))}
